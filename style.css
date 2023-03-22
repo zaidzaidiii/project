@@ -9,9 +9,11 @@
 
 nav{
     width: 100%;
-    height: 18vh;
+    height: 12vh;
     background-color: black;
+    
 }
+
 
 label.logo{
     color: white;
@@ -19,16 +21,22 @@ label.logo{
     font-weight: bold;
     line-height: 80px;
     padding: 0 100px;
+    
 }
 
 nav ul{
     float: right;
     padding-right: 40rem;
+    
+    
 }
 nav ul li{
+    
     display: inline-block;
- line-height: 80px;
- margin: 0 5px;
+    line-height: 5px;
+    
+ 
+
     
 
 }
@@ -39,14 +47,21 @@ nav ul li a{
 font-size: larger;
 font-weight: 700;
 padding: 0 10px;
+
+/* display: inline-block;
+ line-height: 5px;
+ margin: 0 5px; */
+
+
 }
 nav ul li a:hover{
+    
     color: yellow;
 }
 
 /* this is the unlderline link code */
 nav ul li a:after{
-content: " ";
+content:;
 position: absolute;
 background-color: yellow;
 height: 3px;
@@ -67,9 +82,10 @@ nav ul li a:hover::after{
 width: 100%;
 height: 100vh;
         
-background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?size=626&ext=jpg&ga=GA1.1.192231667.1676409381&semt=sph");
+background-image: url("WhatsApp\ Image\ 2023-03-20\ at\ 11.59.11\ PM.jpeg");
 background-size: cover; 
 background-repeat: no-repeat;
+
 
 /* animation: change 20s linear infinite; */
 }
@@ -115,13 +131,56 @@ padding-left: 70rem;
     float: right;
     padding-top: 2rem;
     cursor: pointer;
-    margin-right: 5rem;
+    margin-right: 3rem;
+    
     font-size: xx-large;
     font-weight: bold;
     display: none;
 }
 #check{
     display: none;
+}
+/* WELCOME SCREEN M Q  */
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 10px;
+    
+    
+    
+    
+}
+.merge{
+    grid-column: 1/4;
+    
+    text-align: center;
+    background-color: aqua;
+}
+.child{
+    background-color: white;
+    text-align: center;
+    /* border: 1px black solid; */
+    padding: 10px;
+    width: 100%;
+    
+}
+.welcome{
+    /* font-family: 'HelveticaNeueLTPro', sans-serif; */
+    
+}
+p{
+    color: gray;
+    /* font-family: 'HelveticaNeueLTPro', sans-serif; */
+    font-size: smaller;
+}
+h3{
+    /* font-family:'HelveticaNeueLTPro', sans-serif; */
+}
+.father{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
 }
 
 
@@ -131,6 +190,69 @@ padding-left: 70rem;
 /* 320px — 480px: Mobile devices. */
 
 @media (min-width: 320px) and (max-width: 1024px) {
+    
+    
+    .para {
+        text-align: center;
+    }
+    
+    nav{
+        padding: 0px 20px;
+    }
+
+    label.logo{
+        
+        font-size: 36px;
+        padding:25px 0px;
+
+    }
+    .checkbtn{
+        display: block;
+    }
+nav ul{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?size=626&ext=jpg&ga=GA1.1.192231667.1676409381&semt=sph"); */
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    top: 75px;
+    left: -100%;
+    text-align: 90%;
+    transition: 0.5s ease;
+    
+}
+nav ul li {
+    display:block;
+margin: 60px 0px;
+line-height: 2px;
+
+
+}
+#check:checked~ul{
+    left: 0;
+}
+.resturant .heading{
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.resturant .para{
+    font-size: 16px;
+    padding: 10px 7px 0px 0px;
+}
+/* welcome page m q  */
+.father{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+
+}
+/* 481px — 768px: iPads, Tablets. */
+
+@media (min-width: 481px) and (max-width: 768px) {
     nav{
         padding: 0px 20px;
     }
@@ -175,7 +297,20 @@ line-height: 2px;
     font-size: 16px;
     padding: 10px 7px 0px 0px;
 }
+    /* welcome page m q  */
+    .father{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .merge2{
+        grid-column: 1/3;
+        
+    }
+
+
+    
 }
+
 
 
 /* 769px — 1024px: Small screens, laptops. */
@@ -218,10 +353,16 @@ nav ul li a{
 .checkbtn{
     display: none;
 } */
+/* welcome page m q  */
+.father{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 }
 
 /* 1025px — 1200px: Desktops, large screens. */
 
 @media (min-width: 1025px) and (max-width: 1200px) {
+    
     
 }
